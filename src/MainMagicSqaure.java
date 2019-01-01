@@ -30,8 +30,8 @@ public class MainMagicSqaure {
                 {9, 5, 1},              // but isMagicSquare needs to work for ANY
                 {4, 3, 8} };            // nxn array
 
+        System.out.println("\n\nTesting 3x3 square:");
         print2DArray(test);
-
         System.out.println(isMagicSquare(test));
         
         
@@ -40,8 +40,8 @@ public class MainMagicSqaure {
                 {7,5,3},  
                 {6,1,8} };
 
+        System.out.println("\n\nTesting 3x3 square:");
         print2DArray(test2);
-
         System.out.println(isMagicSquare(test2));
 
         int[][] test3= { 
@@ -49,9 +49,23 @@ public class MainMagicSqaure {
                 {7,5,4},  
                 {6,1,8} };
 
+        System.out.println("\n\nTesting 3x3 square:");
         print2DArray(test3);
-
         System.out.println(isMagicSquare(test3));
+        
+        
+        
+        int[][] test5= { 
+                {15,8,1,24,17},  
+                {16,14,7,5,23},  
+                {22,20,13,6,4},
+                {3,21,19,12,10},
+                {9,2,25,18,11}};
+
+        System.out.println("\n\nTesting 5x5 square:");
+        print2DArray(test5);
+        System.out.println(isMagicSquare(test5));
+        
     }
 
     
@@ -144,7 +158,7 @@ public class MainMagicSqaure {
     public static void print2DArray(int[][] arr) {
         for (int row = 0; row < arr.length; row++) {
             for (int col = 0; col < arr[0].length; col++) {
-                System.out.print(arr[row][col] + " ");
+                System.out.printf("%2d ",arr[row][col]);
             }
             System.out.println();
         }
